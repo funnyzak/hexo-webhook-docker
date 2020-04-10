@@ -1,8 +1,15 @@
 #!/bin/sh
-set -eo pipefail
 
 cd /source
-git clone https://$GITHUB_REPO . && git pull
+rm -rf ..?* .[!.]* *
 
+echo "git clone code start"
+git clone $GITHUB_REPO .; git pull
+echo "git clone code end"
+
+echo "build start"
 npm install && npm run build || (echo "Build failed. Aborting!"; exit 1)
-echo "Done!"
+echo "Build Done!"
+
+echo "Copying files..."
+rsync -q -r --delete public/ /output/
