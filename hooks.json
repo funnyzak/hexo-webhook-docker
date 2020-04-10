@@ -1,0 +1,7 @@
+[
+    {
+      "id": "hexo-webhook",
+      "execute-command": "/app/webhook.sh",
+      "command-working-directory": "/app"
+    }
+  ]
