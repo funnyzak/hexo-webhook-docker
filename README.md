@@ -16,8 +16,14 @@ The following flags are a list of all the currently supported options that can b
  - **GIT_EMAIL** : Set your email for code pushing (required for git to work)
  - **GIT_NAME** : Set your name for code pushing (required for git to work)
  
- ## Docker-Compose Yaml
+## Volume
 
+ - **/app/code** : hexo output dir.
+ - **/app/output** : source code dir. Will automatically pull the code.
+ - **/root/.ssh** :  If it is a private repository, please set ssh key
+
+
+## Docker-Compose YAML
  ```
 version: '3'
 services:
