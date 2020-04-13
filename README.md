@@ -21,10 +21,10 @@ The following flags are a list of all the currently supported options that can b
  ```
 version: '3'
 services:
-  pblog:
-    image: hexo
+  hexo_blog:
+    image: funnyzak/hexo
     privileged: true
-    container_name: pblog
+    container_name: hexo_blog
     working_dir: /app/hook
     logging:
       driver: 'json-file'
