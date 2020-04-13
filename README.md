@@ -1,10 +1,11 @@
 # hexo docker
 Pull your hexo project Git code into a data volume and trigger automatic packaging via Webhook.
 
-Webhook url: http://hostname:9000/hooks/hexo-webhook
+#### [Docker hub image: funnyzak/hexo-webhook](https://hub.docker.com/r/funnyzak/hexo-webhook)
 
-##### [Docker hub image: funnyzak/hexo-docker](https://hub.docker.com/r/funnyzak/hexo)
+#### Webhook URL: http://hostname:9000/hooks/hexo-webhook
 
+#### Pull Command: `docker pull funnyzak/hexo-webhook`
 ---
 
 ## Available Configuration Parameters
@@ -31,7 +32,7 @@ The following flags are a list of all the currently supported options that can b
 version: '3'
 services:
   hexo_blog:
-    image: funnyzak/hexo
+    image: funnyzak/hexo-webhook
     privileged: true
     container_name: hexo_blog
     working_dir: /app/hook
