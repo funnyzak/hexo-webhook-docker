@@ -1,5 +1,5 @@
 # hexo docker
-Pull your Git code into a data volume ready to use in other containers. Provides a webhook, so that you can get new code pulled in automatically.
+Pull your hexo project Git code into a data volume and trigger automatic packaging via Webhook.
 
 Webhook url: http://hostname:9000/hooks/hexo-webhook
 
