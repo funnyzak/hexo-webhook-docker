@@ -5,6 +5,7 @@ Webhook url: http://hostname:9000/hooks/hexo-webhook
 
 ##### [Docker hub image: funnyzak/hexo-docker](https://hub.docker.com/r/funnyzak/hexo)
 
+---
 
 ## Available Configuration Parameters
 
@@ -22,6 +23,8 @@ The following flags are a list of all the currently supported options that can b
  - **/app/output** : source code dir. Will automatically pull the code.
  - **/root/.ssh** :  If it is a private repository, please set ssh key
 
+
+---
 
 ## Docker-Compose YAML
  ```
@@ -51,5 +54,33 @@ services:
       - ./output:/app/output # hexo output dir 
       - ./code:/app/code # source code dir. Will automatically pull the code.
       - ./ssh:/root/.ssh # If it is a private repository, please set ssh key
+
+ ```
+---
+
+ ## Nginx Demo
+
+ ```
+server {
+    listen       80;
+    server_name  yourdomain.com;
+
+    underscores_in_headers on;
+    ssl off;
+
+    location / {
+        root   /mnt/app/hexo/output;
+        index  index.html index.htm;
+    }
+
+    location /webhook {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-Ip $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_pass http://127.0.0.1:9000/hooks/hexo-webhook;
+    }
+
+    error_page  404   /404.html;
+}
 
  ```
