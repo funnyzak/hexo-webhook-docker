@@ -44,7 +44,6 @@ fi
 
 sh /app/hook/webhook.sh
 
-
 if [ -n "$USE_HOOK" ]; then
     echo "start hook..."
     /go/bin/webhook -hooks /app/hook/hooks.json -verbose
