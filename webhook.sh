@@ -1,10 +1,8 @@
 #!/bin/sh
 
-cd /app/source
-
-echo "git clone code start"
-git clone ${GITHUB_REPO} .; git pull
-echo "git clone code end"
+echo "git pull code start" 
+git pull
+echo "git pull code end"
 
 echo "build start"
 npm install && npm run build || (echo "Build failed. Aborting!"; exit 1)
