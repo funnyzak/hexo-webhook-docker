@@ -10,6 +10,7 @@ Webhook url: http://hostname:9000/hooks/hexo-webhook
 
 The following flags are a list of all the currently supported options that can be changed by passing in the variables to docker with the -e flag.
 
+ - **USE_HOOK** : The web hook is enabled as long as this is present.
  - **GIT_REPO** : URL to the repository containing your source code
  - **GIT_BRANCH** : Select a specific branch (optional)
  - **GIT_EMAIL** : Set your email for code pushing (required for git to work)
@@ -31,6 +32,7 @@ services:
         max-size: '1g'
     tty: true
     environment:
+      - USE_HOOK=1
       - GIT_REPO=git@github.com:username/repo_name.git
       - GIT_BRANCH=master
       - GIT_EMAIL=youremail

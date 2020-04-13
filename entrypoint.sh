@@ -42,10 +42,19 @@ if [ ! -d "/app/code/.git" ];then
   fi
 fi
 
+sh /app/hook/webhook.sh
 
 
-echo "start hook..."
-/go/bin/webhook -hooks /app/hook/hooks.json -verbose
+if [ -n "$USE_HOOK" ]; then
+    echo "start hook..."
+    /go/bin/webhook -hooks /app/hook/hooks.json -verbose
+else
+    sh sh /app/hook/webhook.sh
+    while sleep 23h; do sh sh /app/hook/webhook.sh; done
+fi
+
+
+
 
 
 

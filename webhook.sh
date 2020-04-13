@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd /app/code
+
 echo "git pull code start" 
 git pull
 echo "git pull code end"

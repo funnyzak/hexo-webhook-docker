@@ -25,7 +25,7 @@ COPY entrypoint.sh /app/hook/entrypoint.sh
 RUN chmod +x /app/hook/webhook.sh
 
 # Expose Webhook port
-EXPOSE 9000
+EXPOSE 9000 4000
 
 # run start script
 ENTRYPOINT ["sh", "/app/hook/entrypoint.sh"]
