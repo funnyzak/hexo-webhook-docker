@@ -27,7 +27,7 @@ The following flags are a list of all the currently supported options that can b
 
 ---
 
-## Docker-Compose YAML
+## Docker-Compose
  ```
 version: '3'
 services:
@@ -59,7 +59,7 @@ services:
  ```
 ---
 
- ## Nginx Demo
+ ## Nginx
 
  ```
 server {
