@@ -5,7 +5,7 @@ LABEL org.label-schema.vendor="potato<silenceace@gmail.com>" \
     org.label-schema.description="Pull your hexo project Git code into a data volume and trigger automatic packaging via Webhook." \
     org.label-schema.url="https://yycc.me" \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="https://github.com/funnyzak/hexo-webhook" 
+    org.label-schema.vcs-url="https://github.com/funnyzak/hexo-webhook-docker" 
 
 ENV LANG=C.UTF-8
 
