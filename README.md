@@ -1,12 +1,24 @@
 # Hexo Webhook Docker
+
 Pull your hexo project Git code into a data volume and trigger automatic packaging via Webhook.
 
-#### [Docker hub image: funnyzak/hexo-webhook](https://hub.docker.com/r/funnyzak/hexo-webhook)
+[![Docker Stars](https://img.shields.io/docker/stars/funnyzak/hexo-webhook.svg?style=flat-square)](https://hub.docker.com/r/funnyzak/hexo-webhook/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/funnyzak/hexo-webhook.svg?style=flat-square)](https://hub.docker.com/r/funnyzak/hexo-webhook/)
 
-#### Webhook URL: http://hostname:9000/hooks/hexo-webhook
+This image is based on Alpine Linux image, which is a 163MB image.
 
-#### Pull Command: `docker pull funnyzak/hexo-webhook`
+Download size of this image is:
+
+[![](https://images.microbadger.com/badges/image/funnyzak/hexo-webhook.svg)](http://microbadger.com/images/funnyzak/hexo-webhook "Get your own image badge on microbadger.com")
+
+[Docker hub image: funnyzak/hexo-webhook](https://hub.docker.com/r/funnyzak/hexo-webhook)
+
+Docker Pull Command: `docker pull funnyzak/hexo-webhook`
+
+Webhook Url: http://hostname:9000/hooks/hexo-webhook
+
 ---
+
 
 ## Available Configuration Parameters
 
