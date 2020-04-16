@@ -32,8 +32,8 @@ The following flags are a list of all the currently supported options that can b
 
 ## Volume Configuration
 
-- **/app/code** : hexo output dir.
-- **/app/output** : source code dir. Will automatically pull the code.
+- **/app/output** : hexo packaged output destination folder.
+- **/app/code** : source code dir. Will automatically pull the code.
 - **/root/.ssh** :  If it is a private repository, please set ssh key
 
 ### ssh-keygen
