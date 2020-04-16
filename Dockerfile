@@ -13,12 +13,12 @@ LABEL org.label-schema.vendor="potato<silenceace@gmail.com>" \
     org.label-schema.vcs-ref="${VCS_REF}" \
     org.label-schema.vcs-url="https://github.com/funnyzak/hexo-webhook-docker" 
 
-# Copy webhook config
-COPY conf/hooks.json /app/hook/hooks.json
+ENV STARTUP_COMMANDS mkdir -p /app/output
+ENV AFTER_PULL_COMMANDS npm install && npm run build && rsync -q -r --delete public/ /app/output/
+ENV BEFORE_PULL_COMMANDS mkdir -p /app/output
 
-# Add any user custom scripts + set permissions
-ADD custom_scripts /custom_scripts
-RUN chmod +x -R /custom_scripts
+# Copy Webhook config
+COPY hooks.json /app/hook/hooks.json
 
 # Expose Webhook port
 EXPOSE 9000
