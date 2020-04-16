@@ -66,13 +66,12 @@ services:
       - GIT_EMAIL=youremail
       - GIT_NAME=yourname
     restart: on-failure
-    # 映射端口
     ports:
       - 9000:9000 # webhook port
     volumes:
-      - ./output:/app/output # hexo output dir 
-      - ./code:/app/code # source code dir. Will automatically pull the code.
-      - ./ssh:/root/.ssh # If it is a private repository, please set ssh key
+      - ./output:/app/output
+      - ./code:/app/code
+      - ./ssh:/root/.ssh
 
  ```
 
