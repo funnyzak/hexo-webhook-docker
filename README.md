@@ -28,7 +28,7 @@ The following flags are a list of all the currently supported options that can b
 * **GIT_BRANCH** : Select a specific branch (optional)
 * **GIT_EMAIL** : Set your email for code pushing (required for git to work)
 * **GIT_NAME** : Set your name for code pushing (required for git to work)
-* **WEBHOOK_LIST** : Optional. Notify link array that send notifications when pull code, each link is separated by **|**
+* **WEBHOOK_LIST** : Optional. Notify link Array. each link is separated by **|**
 * **HOOK_NAME** : Optional. When setting **WEBHOOK_LIST**, it is best to set a HOOK name
 
 ---
