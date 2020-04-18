@@ -16,3 +16,5 @@ LABEL org.label-schema.vendor="potato<silenceace@gmail.com>" \
 ENV BUILD_COMMAND npm run build
 ENV INSTALL_DEPS_COMMAND npm install
 ENV OUTPUT_DIRECTORY public/
+
+EXPOSE 80
